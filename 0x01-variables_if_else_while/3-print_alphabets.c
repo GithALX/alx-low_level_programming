@@ -6,7 +6,7 @@
 /**
  * main - entry point
  *
- * description: print the alphabet in lower case then in uppercase
+ * description: a
  *
  * return: 0 (success)
  */
