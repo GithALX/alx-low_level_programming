@@ -20,7 +20,7 @@ int main(void)
 			putchar('.');
 			putchar(' ');
 		}
-		digit1++;
+		digit++;
 	}
 	putchar('\n');
 
