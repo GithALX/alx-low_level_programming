@@ -2,14 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-
 /**
- * main - entry point
+ * main - Determines if a number is positive, negative or zero.
  *
- * description: prints all the alphabets except q and e
- *
- * return: 0 (success)
- */
+ * Return: Always 0 (Success)
+*/
 int main(void)
 {
 	char ch = 'a';

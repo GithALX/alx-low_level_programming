@@ -2,15 +2,11 @@
 #include <time.h>
 #include <stdio.h>
 
-
 /**
- * main - entry point
+ * main - Determines if a number is positive, negative or zero.
  *
- * description: print all the alphabet letters in lowercase
- *
- * return: 0 (success)
+ * Return: Always 0 (Success)
 */
-/* we're gonna print the alphabets in lowercase */
 int main(void)
 {
 	char ch = 'a';
