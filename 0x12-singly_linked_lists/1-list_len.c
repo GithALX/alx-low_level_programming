@@ -1,10 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
 
 /**
- * list_len - determines lenght of linked list
- * @h: a Linked list
+ * list_len - determines length of linked list
+ * @h: a pointer to first node
  *
  * Return: size of a linked list.
  */
@@ -18,6 +16,5 @@ size_t list_len(const list_t *h)
 		h = h->next;
 		i++;
 	}
-
 	return (i);
 }
