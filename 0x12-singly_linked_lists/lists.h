@@ -1,7 +1,7 @@
 #ifndef LINKED
 #define LINKED
 
-#include <stdef.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -20,7 +20,7 @@ typedef struct list_s
 	struct list_s *next;
 } list_t;
 
-sh: 1: q: not found
+
 int _strlen(char *s);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
