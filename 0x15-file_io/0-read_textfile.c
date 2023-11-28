@@ -7,7 +7,8 @@
  * @filename: Name of the file to read.
  * @letters: Number of letters to read and print.
  *
- * Return: Number of letters read and printed. 0 on failure or if filename is NULL.
+ * Return: Number of letters read and printed
+ * 0 on failure or if filename is NULL.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -16,12 +17,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 		return (0);
-
 	/* Open the file for reading */
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
 		return (0);
-
 	/* Allocate memory for the buffer */
 	buffer = malloc(sizeof(char) * letters);
 	if (buffer == NULL)
@@ -29,7 +28,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(file_descriptor);
 		return (0);
 	}
-
 	/* Read from file */
 	read_bytes = read(file_descriptor, buffer, letters);
 	if (read_bytes == -1)
@@ -38,7 +36,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(file_descriptor);
 		return (0);
 	}
-
 	/* Write to STDOUT */
 	written_bytes = write(STDOUT_FILENO, buffer, read_bytes);
 	if (written_bytes == -1 || written_bytes != read_bytes)
@@ -47,13 +44,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(file_descriptor);
 		return (0);
 	}
-
 	total_written += written_bytes;
-
 	/* Clean up resources */
 	free(buffer);
 	close(file_descriptor);
 
 	return (total_written);
 }
-
