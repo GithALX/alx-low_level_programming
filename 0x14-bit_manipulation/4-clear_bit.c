@@ -3,7 +3,7 @@
 /**
  * clear_bit - sets the value of a bit to 0 at a given index
  * @n: parameter
- * @index: index
+ * @index: index of the bit
  * Return: 1 if success, -1 on error
  */
 int clear_bit(unsigned long int *n, unsigned int index)
