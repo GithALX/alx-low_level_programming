@@ -8,16 +8,18 @@
 
 char *_strdup(char *str)
 {
+	char *dest;
+	char *p_str = str;
+	char *p_dest;
+
 	if (str == NULL)
 		return (NULL);
 
-	char *dest = malloc(strlen(str) + 1);
-	char *p_str = str;
-	char *p_dest = dest;
-
+	dest = malloc(strlen(str) + 1);
 	if (dest == NULL)
 		return (NULL);
 
+	p_dest = dest;
 	while (*p_str)
 	{
 		*p_dest = *p_str;
