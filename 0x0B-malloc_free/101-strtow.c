@@ -93,7 +93,7 @@ char **strtow(char *str)
 			i++;
 		if (str[i] == '\0')
 			break;
-		
+
 		word_start = i;
 		while (str[i] != ' ' && str[i] != '\0')
 			i++;
